@@ -51,7 +51,7 @@ for stock in stocks:
     mystock.change = stock_df
     mystock.pchange = stock_df
     stock_trade_day = datetime.strptime(stock_df.trade_date[0], '%Y%m%d').day
-    print(mystock.name, mystock.symbol, mystock.cost, mystock.price, mystock.change, mystock.pchange)
+#   print(mystock.name, mystock.symbol, mystock.cost, mystock.price, mystock.change, mystock.pchange)
 
     if stock_trade_day != today:
         Notification(value1 = mystock.name, value2 = '数据没有更新', event = ifttt_event).sent()
